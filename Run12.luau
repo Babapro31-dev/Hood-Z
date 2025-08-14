@@ -21,7 +21,7 @@ local Run12 = {
 	local Run_Service = game:GetService "RunService"
 	local HTTP_Service = game:GetService "HttpService"
 	local Tween_Service = game:GetService "TweenService"
-	local User_Input_Service = game:GetService("UserInputService")
+	local User_Input_Service = game:GetService "UserInputService"
 
 	local Local_Player = Player_Service.LocalPlayer
     local Local_Camera;
@@ -75,7 +75,7 @@ local Run12 = {
 	end
 
 	local Handler = Run_Service.RenderStepped:Connect(function()
-		Cursor = User_Input_Service:GetMouseLocation()
+		Cursor = (User_Input_Service.MouseEnabled and User_Input_Service:GetMouseLocation()) or (Local_Camera.ViewportSize / 2)
 		Circle.Color = G3
 		Circle.Visible = Run12.Circle_Enabled and Run12.Circle_Visible
 		Circle.Position = Cursor
