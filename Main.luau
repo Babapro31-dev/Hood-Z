@@ -9,7 +9,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("MainEvent"):FireServer(unpack
 local Player_Service = game:GetService "Players"
 local Local_Player = Player_Service.LocalPlayer
 
-loadstring(game:HttpGet("http://localhost:505/Adonis_bypass.luau"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babapro31-dev/Hood-Z/refs/heads/main/Adonis_bypass.luau"))();
 
 local Run12 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Babapro31-dev/Hood-Z/refs/heads/main/Run12.luau"))();
 Run12.Team_Check = false
@@ -46,3 +46,4 @@ namecall = hookmetamethod(game, "__namecall", function(self, ...)
 	return namecall(self, ...)
 
 end)
+
